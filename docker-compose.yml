@@ -1,0 +1,10 @@
+services:
+  todofront:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: todofront
+    ports:
+      - "8000:80"
+    volumes:
+      - ./src/:/usr/local/apache2/htdocs/
